@@ -15,21 +15,22 @@ public class Quadrado extends View {
     private final float right;
     private final float top;
     private final float bottom;
-    private final Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint mPaint;
 
 
 
-    public Quadrado(Context context, float left, float right, float bottom, float top) {
+    public Quadrado(Context context, float left, float top, float bottom, float right) {
         super(context);
         this.left = left;
         this.right = right;
         this.top = top;
         this.bottom = bottom;
+        mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
         //define a cor base
-        mPaint.setColor(0xFFFFFAA0); //cor
+        mPaint.setColor(0xFFAAFAA0); //cor
+        mPaint.setStrokeWidth(25f);
     }
-
 
     @Override
     protected void onDraw(Canvas canvas) {
