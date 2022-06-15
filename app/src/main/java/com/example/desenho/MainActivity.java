@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity {
         //obter o id da view
         main = (FrameLayout) findViewById(R.id.main_view);
 
-        main.addView(new Bola(this, 100, 100, 40));
+        main.addView(new Quadrado(this, 100, 100, 100, 100));
     }
-
+/*
     public boolean onTouchEvent(MotionEvent event) {
         switch(event.getAction()) {
             case MotionEvent.ACTION_DOWN:
@@ -28,6 +28,20 @@ public class MainActivity extends AppCompatActivity {
                         event.getX(),
                         event.getY(),
                         40));
+                return true;
+            case MotionEvent.ACTION_MOVE:
+                return true;
+
+        }
+
+        return true;
+    }
+ */
+
+    public boolean onTouchEvent(MotionEvent event) {
+        switch(event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                main.addView(new Quadrado(this, 100, 100,event.getX(),event.getY()));
                 return true;
             case MotionEvent.ACTION_MOVE:
                 return true;

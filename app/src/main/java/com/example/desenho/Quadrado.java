@@ -9,20 +9,23 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.view.View;
 
-public class Bola extends View {
+public class Quadrado extends View {
 
-    private final float x;
-    private final float y;
-    private final int r;
+    private final float left;
+    private final float right;
+    private final float top;
+    private final float bottom;
     private final Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
 
 
-    public Bola(Context context, float x, float y, int r) {
+    public Quadrado(Context context, float left, float right, float bottom, float top) {
         super(context);
-        this.x = x;
-        this.y = y;
-        this.r = r;
+        this.left = left;
+        this.right = right;
+        this.top = top;
+        this.bottom = bottom;
+
         //define a cor base
         mPaint.setColor(0xFFFFFAA0); //cor
     }
@@ -31,8 +34,7 @@ public class Bola extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        //desenha circulo
-        canvas.drawCircle(x,y,r,mPaint);
+        canvas.drawRect(left, top, bottom, right, mPaint);
     }
 
 }
