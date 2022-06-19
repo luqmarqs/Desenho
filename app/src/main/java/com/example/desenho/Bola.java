@@ -1,7 +1,10 @@
 package com.example.desenho;
 
 /*
- * Criado em aula no dia 14/06/2022 para a matéria de desenvolvimento mobile no Cotuca
+ * Aluno: Lucas Marques de Almeida
+ * RA: 21104
+ * Criado em aula no dia 14/06/2022 para a matéria de desenvolvimento mobile no Cotuca.
+ *
  * */
 
 import android.content.Context;
@@ -9,7 +12,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.view.View;
 
-public class Bola extends View {
+public class Bola extends View implements Forma{
 
     private final float x;
     private final float y;

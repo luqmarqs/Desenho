@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Desenho</string>
+    <string name="seletor_traco">Escolha o traço</string>
+    <string name="apagar_traco">Apagar</string>
 </resources>
